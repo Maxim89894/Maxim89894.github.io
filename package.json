@@ -1,0 +1,14 @@
+{
+  "name": "maxim-portfolio",
+  "private": true,
+  "description": "Портфолио Максима: статический сайт + Cloudflare Workers для заявок и статистики",
+  "scripts": {
+    "start": "serve site -l 3000",
+    "test": "playwright test",
+    "lighthouse": "lhci autorun --config=tests/lighthouserc.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "serve": "^14.2.6"
+  }
+}

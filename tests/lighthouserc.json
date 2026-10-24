@@ -1,0 +1,36 @@
+{
+ "ci": {
+  "collect": {
+   "url": [
+    "http://localhost:3000/"
+   ],
+   "numberOfRuns": 3,
+   "settings": {
+    "preset": "desktop"
+   },
+   "startServerCommand": "npx serve site -l 3000"
+  },
+  "assert": {
+   "assertions": {
+    "largest-contentful-paint": [
+     "error",
+     {
+      "maxNumericValue": 2500
+     }
+    ],
+    "cumulative-layout-shift": [
+     "error",
+     {
+      "maxNumericValue": 0.1
+     }
+    ],
+    "categories:accessibility": [
+     "error",
+     {
+      "minScore": 0.95
+     }
+    ]
+   }
+  }
+ }
+}
